@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dragon - Sniper Chart</title>
+
+    <!-- Include Chart.js and FontAwesome -->
+    <script src="lib/chart.js"></script>
+    <link rel="icon" type="image/png" sizes="128x128" href="images/icon-128.png" />
+    <link rel="stylesheet" href="lib/fontawesome/css/all.min.css" />
+
+    <!-- Combined CSS (reference styling & adjustments) -->
+    <style>
+      /* ------------------------------
+         GLOBAL & BASIC STYLES
+      --------------------------------*/
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #1e1e1e;
+        color: #ccc;
+        font-family: "Inter", sans-serif;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      /* ------------------------------
+         HEADER SECTION
+      --------------------------------*/
+      .main-header {
+        position: relative;
+        padding: 7.5% 15% 2rem;
+        text-align: left;
+        background: #1e1e1e;
+        border-bottom: 1px solid #1e1e1e;
+      }
+      .main-header .dragon-image {
+        position: absolute;
+        top: 2%;
+        right: 15%;
+        width: 30%;
+        height: auto;
+      }
+      .project-title {
+        margin: 0;
+        font-size: 2rem;
+        font-weight: 600;
+        color: #fff;
+      }
+      .module-title {
+        font-size: 0.9rem;
+        color: #ffffff;
+      }
+      .bounty-text {
+        font-size: 0.9rem;
+        color: #ffdb66;
+      }
+      .instructions {
+        max-width: 650px;
+        font-size: 0.9rem;
+        line-height: 1.4;
+        color: #ffffff;
+      }
+
+      /* ------------------------------
+         MAIN LAYOUT
+      --------------------------------*/
+      .layout {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 2% 15.5%;
+      }
+
+      /* ------------------------------
+         LEFT COLUMN: "Sniper" Section
+      --------------------------------*/
+      .sniper-section {
+        flex: 1 1 300px;
+        background-color: #1e1e1e;
+        border-radius: 8px;
+        min-width: 280px;
+        padding: 1rem;
+      }
+      .sniper-section h2 {
+        margin-top: 0;
+        font-size: 1rem;
+        color: #ffffff;
+        margin-bottom: 1rem;
+      }
+      .bundle-stats {
+        margin-top: 12px;
+        color:white;
+      }
+      .bundle-stats div {
+        margin-bottom: 0.5rem;
+        font-size: 0.9rem;
+      }
+      .bundle-stats div strong {
+        color: #ffffff;
+        margin-left: 4px;
+      }
+
+      /* ------------------------------
+         RIGHT COLUMN: Chart/Output Section
+      --------------------------------*/
+      .output-section {
+        flex: 1 1 500px;
+        background-color: #1e1e1e;
+        border-radius: 8px;
+        min-width: 320px;
+        padding: 1rem;
+      }
+      .output-section h2 {
+        color: #ffffff;
+        margin-top: 0;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      /* Container style from your original reference */
+      .container {
+        background-color: #100c1c;
+        padding: 6px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        margin-top: 1rem;
+      }
+
+      /* New stats styling in the Sniper Chart Output area */
+      .bundle-output-stats {
+        font-size: 0.9rem;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid #333;
+        margin-bottom: 0.5rem;
+      }
+      .bundle-output-stats div strong {
+        color: #fff;
+      }
+
+      /* ------------------------------
+         SEARCH HEADER
+      --------------------------------*/
+      .search-header {
+        display: flex;
+        padding: 8px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 8px;
+        margin-bottom: 0;
+      }
+      .search-header input.address-input {
+        width: 100%;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 8px 12px;
+        border-radius: 6px;
+        color: #fafafa;
+        font-size: 13px;
+        outline: none;
+      }
+      .search-header input.address-input:focus {
+        border-color: #2070cb;
+      }
+
+      /* ------------------------------
+         BUNDLE CHART CONTAINER
+      --------------------------------*/
+      .bundle-chart-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem 0;
+      }
+      .bundle-canvas {
+        background: #1e1e1e;
+        border-radius: 6px;
+        
+      }
+      #bundleDistMessage {
+        margin: 1rem 0;
+        font-size: 0.9rem;
+        color: #fff;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header Section -->
+    <div class="main-header">
+      <img src="images/logo.gif" alt="Dragon" class="dragon-image" />
+      <h1 class="project-title">Project: Dragon</h1>
+      <h2 class="module-title">Module: Bundles Chart</h2>
+      <p class="bounty-text">Bounty: 0.20% of $DRAGON supply</p>
+      <p class="instructions">
+        Please paste an SPL token contract address in the field provided
+        to test the functionality of your code. The data output is
+        defined in the readme on your main branch. Good luck and godspeed!
+      </p>
+    </div>
+
+    <!-- Main Layout -->
+    <div class="layout">
+      <!-- LEFT COLUMN: Sniper Chart Stats -->
+      <div class="sniper-section">
+        <h2>Data Fields</h2>
+        <!-- Bundle Stats (Active Bundles, Total Holding) -->
+        <div class="bundle-stats">
+          <div>Active Bundles: <strong>Loading..</strong></div>
+          <div>Total Holding: <strong>Loading..</strong></div>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN: Output / Chart Section -->
+      <div class="output-section">
+        <h2>Enter Contract Address</h2>
+        <div class="container">
+          <!-- Search Header -->
+          <div class="search-header">
+            <input
+              type="text"
+              class="address-input"
+              placeholder="Enter contract address..."
+            />
+          </div>
+        </div>
+
+        <br /><br />
+
+        <h2>Bundle Chart Output</h2>
+        <div class="container">
+          <!-- New Stats Display in Output Section -->
+          <div class="bundle-output-stats">
+            <div>Active Bundles: <strong>Loading..</strong></div>
+            <div>Total Holding: <strong>Loading..</strong></div>
+          </div>
+
+          <!-- Chart Message (hidden by default) -->
+          <div id="bundleDistMessage" style="display: none;">
+            <p>It looks like everything held has been sold</p>
+          </div>
+
+          <!-- Chart Container -->
+          <div class="bundle-chart-container"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Script references -->
+    <!-- The below "charts.js" is your rewritten logic from the original chart.js -->
+    <script type="module" src="js/charts.js"></script>
+  </body>
+</html>
