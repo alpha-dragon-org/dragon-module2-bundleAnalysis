@@ -90,8 +90,8 @@ dragon-data-modules/
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/alpha-dragon-dev/dragon-data-modules.git
-   cd dragon-data-modules
+   git clone https://github.com/alpha-dragon-dev/dragon-module2-bundleAnalysis.git
+   cd dragon-module2-bundleAnalysis
    ```
 
 2. **Install Dependencies:**
