@@ -91,7 +91,7 @@ dragon-data-modules/
 
    ```bash
    git clone https://github.com/alpha-dragon-dev/dragon-module2-bundleAnalysis.git
-   cd dragon-data-modules
+   cd dragon-module2-bundleAnalysis
    ```
 
 2. **Install Dependencies:**
