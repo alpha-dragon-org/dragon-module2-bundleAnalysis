@@ -23,11 +23,11 @@ document.addEventListener("DOMContentLoaded", () => {
       ".bundle-output-stats div:nth-child(2) strong"
     );
 
-    if (activeBundlesLeftElement) activeBundlesLeftElement.textContent = "0";
-    if (totalHoldingLeftElement) totalHoldingLeftElement.textContent = "0.0%";
-    if (activeBundlesOutputElement) activeBundlesOutputElement.textContent = "0";
+    if (activeBundlesLeftElement) activeBundlesLeftElement.textContent = "Loading..";
+    if (totalHoldingLeftElement) totalHoldingLeftElement.textContent = "Loading..";
+    if (activeBundlesOutputElement) activeBundlesOutputElement.textContent = "Loading..";
     if (totalHoldingOutputElement)
-      totalHoldingOutputElement.textContent = "0.0%";
+      totalHoldingOutputElement.textContent = "Loading..";
 
     console.log("[INFO] Bundle stats reset to placeholders.");
   }
@@ -62,7 +62,10 @@ document.addEventListener("DOMContentLoaded", () => {
    **********************/
   async function sendContractAddressToBot(contractAddress) {
     const apiEndpoint =
-      "http://ec2-3-80-88-97.compute-1.amazonaws.com:3001/sendContractAddress";
+      // "http://ec2-3-80-88-97.compute-1.amazonaws.com:3001/sendContractAddress";
+      "http://localhost:3001/sendContractAddress";
+
+      
 
     try {
       const response = await fetch(apiEndpoint, {
@@ -86,7 +89,9 @@ document.addEventListener("DOMContentLoaded", () => {
   async function clearAPIData() {
     try {
       const response = await fetch(
-        "http://ec2-3-80-88-97.compute-1.amazonaws.com:3000/clearData",
+        // "http://ec2-3-80-88-97.compute-1.amazonaws.com:3000/clearData",
+        "http://localhost:3000/clearData",
+
         { method: "POST" }
       );
       if (response.ok) {
@@ -301,7 +306,9 @@ document.addEventListener("DOMContentLoaded", () => {
   async function fetchAndUpdateBundleDistChart() {
     try {
       const response = await fetch(
-        "http://ec2-3-80-88-97.compute-1.amazonaws.com:3000/fetchData"
+        // "http://ec2-3-80-88-97.compute-1.amazonaws.com:3000/fetchData"
+        "http://localhost:3000/fetchData"
+
       );
       if (!response.ok)
         throw new Error(`[Bundle Chart] HTTP error! Status: ${response.status}`);
