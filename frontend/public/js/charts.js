@@ -23,11 +23,11 @@ document.addEventListener("DOMContentLoaded", () => {
       ".bundle-output-stats div:nth-child(2) strong"
     );
 
-    if (activeBundlesLeftElement) activeBundlesLeftElement.textContent = "Loading..";
-    if (totalHoldingLeftElement) totalHoldingLeftElement.textContent = "Loading..";
-    if (activeBundlesOutputElement) activeBundlesOutputElement.textContent = "Loading..";
+    if (activeBundlesLeftElement) activeBundlesLeftElement.textContent = "Loading...";
+    if (totalHoldingLeftElement) totalHoldingLeftElement.textContent = "Loading...";
+    if (activeBundlesOutputElement) activeBundlesOutputElement.textContent = "Loading...";
     if (totalHoldingOutputElement)
-      totalHoldingOutputElement.textContent = "Loading..";
+      totalHoldingOutputElement.textContent = "Loading...";
 
     console.log("[INFO] Bundle stats reset to placeholders.");
   }
