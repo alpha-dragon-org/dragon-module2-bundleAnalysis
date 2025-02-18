@@ -164,7 +164,7 @@ dragon-data-modules/
   **Example Output:** `4`
 
   - **% active in bundle**  
-  The amount of token supply active within the bundle. There may be multiple values to fetch, depending on the total # of active bundles.  
+  The amount of token supply actively held within the bundle. There may be multiple values to fetch, depending on the total # of active bundles.  
   **Example Output:** `30.0`
 
 ---
