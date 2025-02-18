@@ -158,8 +158,6 @@ dragon-data-modules/
 - **% Active per Bundle**  
    **Metadata Example:** `30.0`
 
----
-
 ### Module Output
 
 - **# of Wallets per Bundle 2:**  
@@ -168,7 +166,7 @@ dragon-data-modules/
 - **% Active in Bundle 2:**  
   *Example:* `2.2`
 
-- - **Charts containg bundles**  
+- **Charts containg bundles**  
 - **Bundle Analysis:**  
   - **Bundle ID:** `319729266`
   - **Token %:** `32.4395%`
