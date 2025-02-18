@@ -152,15 +152,15 @@ dragon-data-modules/
   The total number of Jito bundles that are actively holding any amount of token supply.  
    **Example Output:** `3`
 
-- **Total % in active bundles**
+- **Total % in active bundles**  
   The total amount of token supply actively held that was bought using a Jito bundle.  
    **Example Output:** `32.2`
 
-- **# of wallets per bundle**
+- **# of wallets per bundle**  
   The number of distinct wallets within a single Jito bundle. There may be multiple values to fetch, depending on the total # of active bundles.  
   **Metadata Example:** `4`
 
-- **% active per bundle**
+- **% active per bundle**  
   The amount of token supply active within a single Jito bundle. There may be multiple values to fetch, depending on the total # of active bundles.  
    **Metadata Example:** `30.0`
 
