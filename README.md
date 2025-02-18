@@ -209,7 +209,7 @@ If you have an idea for a data-module that could benefit traders in the trenches
 2. **Create a feature branch.**
 
    ```bash
-   git checkout -b feature/new-module
+   git checkout -b feature/updated-module
    ```
 
 3. **Replace** `server.js`, `tokenInfo.js`, `apiUtils.js`, **and** `telegramUtils.js` **with your stub functions.**
@@ -224,7 +224,7 @@ If you have an idea for a data-module that could benefit traders in the trenches
 5. **Push the branch.**
 
    ```bash
-   git push origin feature/new-module
+   git push origin feature/updated-module
    ```
 
 6. **Open a pull request describing your changes and the code you have contributed.**
