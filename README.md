@@ -2,9 +2,8 @@
 
 Dragon is a browser extension that visualizes the power concentrations of any token on the Solana blockchain. The extension is separated into "data-modules" that produce different analyses on a token's holders. This initial release includes four data-modules, and the module of focus for this bounty is:
 
-**2. Bundle Analysis**
-- The concentration of the holders who used Jito bundles to purchase token supply with multiple wallets, executed in the same slot within a block. The specific data analyzed includes total number of active bundles, total percentage held in active bundles, number of wallets per bundle, and more.
-- You can learn more about bundles from [this video](https://youtu.be/91k5QYdAprU?si=n0uGyhYk3EesIUdW) or from [Jito's documentation](https://docs.jito.wtf/lowlatencytxnsend/#bundles-api-v1-bundles).
+**2. Bundle Analysis**  
+- The concentration of the holders who used Jito bundles to purchase token supply with multiple wallets, executed in the same slot within a block. The specific data analyzed includes total number of active bundles, total percentage held in active bundles, number of wallets per bundle, and more. You can learn more about bundles from [this video](https://youtu.be/91k5QYdAprU?si=n0uGyhYk3EesIUdW) or from [Jito's documentation](https://docs.jito.wtf/lowlatencytxnsend/#bundles-api-v1-bundles).
   
 Soon, developers will contribute their own modules to Dragon based on what they think is important for traders to know when in the trenches. 
 
