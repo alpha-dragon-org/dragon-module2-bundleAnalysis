@@ -232,7 +232,7 @@ If you have an idea for a data-module that could benefit traders in the trenches
 ---
 ## Issues
 
-Please report any software “bugs” or other problems with this module through the issues tab here: [github.com/alpha-dragon-org/dragon-module1-tokeninfo](https://github.com/alpha-dragon-org/dragon-module1-tokeninfo)
+Please report any software “bugs” or other problems with this module through the issues tab here: [github.com/alpha-dragon-org/dragon-module2-bundleAnalysis](https://github.com/alpha-dragon-org/dragon-module2-bundleAnalysis)
 
 ---
 ## License
