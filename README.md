@@ -157,32 +157,16 @@ dragon-data-modules/
   The total amount of token supply actively held that was bought using a Jito bundle.  
    **Example Output:** `32.2`
 
-- **# of wallets per bundle**  
+- **Metadata for each bundle**
+
+  - **# of wallets in bundle**  
   The number of distinct wallets within a single Jito bundle. There may be multiple values to fetch, depending on the total # of active bundles.  
-  **Metadata Example:** `4`
+  **Example Output:** `4`
 
-- **% active per bundle**  
+  - **% active in bundle**  
   The amount of token supply active within a single Jito bundle. There may be multiple values to fetch, depending on the total # of active bundles.  
-   **Metadata Example:** `30.0`
+  **Example Output:** `30.0`
 
-### Module Output
-
-- **# of Wallets per Bundle 2:**  
-  *Example:* `2`
-
-- **% Active in Bundle 2:**  
-  *Example:* `2.2`
-
-- **Charts containg bundles**  
-- **Bundle Analysis:**  
-  - **Bundle ID:** `319729266`
-  - **Token %:** `32.4395%`
-  - **Holding %:** `30.0000%`
-  - **This Bundle %:** `92.48%`
-
-- **Active Bundles:**  
-  *Example:* `2`  
-  **Total Holding:** `32.2%`
 ---
 
 ## Using Helius RPC for Integration
