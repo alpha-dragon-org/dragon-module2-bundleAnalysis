@@ -149,17 +149,13 @@ dragon-data-modules/
 
 ### Data To Fetch
 
-- **Total # of active bundles**  
-  The total number of Jito bundles that are actively holding any amount of token supply.  
-   **Example Output:** `3`
-
 - **Total % in active bundles**  
   The total amount of token supply actively held that was bought using a Jito bundle.  
    **Example Output:** `32.2`
 
-- **Total # of inactive bundles**  
-  The total number of Jito bundles that are no longer holding any amount of token supply, ie. have sold all holdings to 0%  
-   **Example Output:** `2`
+- **Total # of active bundles**  
+  The total number of Jito bundles that are actively holding any amount of token supply.  
+   **Example Output:** `3`
 
 - **Metadata for each active bundle**
 
@@ -174,6 +170,10 @@ dragon-data-modules/
   - **% active in bundle**  
   The amount of token supply actively held within the bundle. There may be multiple values to fetch, depending on the total # of active bundles.  
   **Example Output:** `30.0`
+
+- **Total # of inactive bundles**  
+  The total number of Jito bundles that are no longer holding any amount of token supply, ie. have sold all holdings to 0%  
+   **Example Output:** `2`
 
 - **Metadata for each inactive bundle**
 
