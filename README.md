@@ -245,7 +245,7 @@ If there is more than one developer to meet the above criteria, the first pull r
 
 ## Future Bounties
 
-Dragon’s aim is to make token analyses more transparent and community-driven. After the initial four modules, bounties will expand to include more data-modules on holder analyses and deception analyses on token supply.
+Dragon’s aim is to make token analyses more transparent and community-driven. At the community's direction, bounties will expand to include more types of holder analyses and deception analyses on token supply.
 
 If you have an idea for a data-module that could benefit traders in the trenches, please propose it in the discussion [here](https://github.com/alpha-dragon-org/dragon-module-openIdeas) to be considered for a bounty.
 
