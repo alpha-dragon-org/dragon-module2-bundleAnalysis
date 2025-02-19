@@ -1,14 +1,10 @@
 # Intro to Dragon Data-Modules
 
-Dragon is a browser extension that visualizes the power concentrations of any token on the Solana blockchain. The extension is separated into "data-modules" that produce different analyses on a token's holders. This initial release includes four data-modules, and the module of focus for this bounty is:
+Dragon is a browser extension that visualizes the power concentrations of any token on the Solana blockchain. The extension is separated into "data-modules" that produce different analyses on a token's holders. Soon, developers will contribute their own modules to Dragon based on what they think is important for traders to know when in the trenches. The Alpha-Dragon includes four data-modules, and the module of focus for this bounty is:
 
 **2. Bundle Analysis**  
-- The concentration of all holders that used Jito bundles to purchase token supply with multiple wallets, executed in the same slot within a block.  
-- The specific data to be analyzed includes total number of active bundles, total percentage held in active bundles, number of wallets per bundle, and more.  
-- You can learn more about bundles from [this video](https://youtu.be/91k5QYdAprU?si=n0uGyhYk3EesIUdW) or from [Jito's documentation](https://docs.jito.wtf/lowlatencytxnsend/#bundles-api-v1-bundles).
+- This module will visualize the concentration of all Jito bundles that purchased a token's supply. A Jito bundle is when you program multiple wallets to execute transactions within the same slot in a Solana block. The specific data we will analyze with this module includes total # of active bundles, total % in active bundles, some metadata per each bundle, and more. You can learn about bundles from [this video](https://youtu.be/91k5QYdAprU?si=n0uGyhYk3EesIUdW) or from [Jito's documentation](https://docs.jito.wtf/lowlatencytxnsend/#bundles-api-v1-bundles). You may also want to know that Jito hosts their own [bundle explorer](https://explorer.jito.wtf/bundle-explorer?sortBy=Tip).
   
-Soon, developers will contribute their own modules to Dragon based on what they think is important for traders to know when in the trenches. 
-
 ---
 
 ## Table of Contents
@@ -30,9 +26,9 @@ Soon, developers will contribute their own modules to Dragon based on what they 
 
 ## Contribution Overview
 
-Each of Dragon's first four modules currently gathers data by web-scraping TrenchyBot, TrenchRadar, and Bubblemaps. The task is to build a pipeline that connects the Token Info module with a Solana RPC (ie. [Helius](https://www.helius.dev)) and replace all scrapes. If any data can not be retrieved from the RPC, the developer can use whatever means necessary given the goals stated in [Module Details](#module-details) below.
+Dragon's first four modules currently gather data by web-scraping TrenchyBot, TrenchRadar, and Bubblemaps. The task is to build a pipeline that connects the Token Info module with a Solana RPC (eg. [Helius](https://www.helius.dev)) and replace all scrapes. If any data can not be retrieved from RPC, the developer can use whatever means necessary given the goals stated in the [Module Details](#module-details) below.
 
-By fetching real-time data directly from a node, Dragon will become an unbeatable companion in the trenches.
+If the data retrieved is as close to real-time as possible, Dragon will become an unbeatable companion in the trenches.
 
 ---
 
@@ -150,26 +146,26 @@ dragon-data-modules/
 ### Data To Fetch
 
 - **Total % in active bundles**  
-  The total amount of token supply actively held that was bought using a Jito bundle.  
+  The total amount of token supply that was bought using a Jito bundle and currently held in a wallet.  
    **Example Output:** `32.2`
 
 - **Total # of active bundles**  
-  The total number of Jito bundles that are actively holding any amount of token supply.  
+  The total number of bundled wallets that are still holding token supply.  
    **Example Output:** `3`
 
 - **Metadata for each active bundle**
 
-  - **# of wallets in bundle**  
-  The number of distinct wallets within the bundle. There may be multiple values to fetch, depending on the total # of active bundles.  
-  **Example Output:** `4`
-
+  - **% active in bundle**  
+  The amount of token supply still held in the bundle. There may be multiple values to fetch, depending on the total # of active bundles.  
+  **Example Output:** `30.0`
+  
   - **% total in bundle**  
   The amount of token supply that the bundle originally bought. There may be multiple values to fetch, depending on the total # of active bundles.  
   **Example Output:** `45.3`
 
-  - **% active in bundle**  
-  The amount of token supply actively held within the bundle. There may be multiple values to fetch, depending on the total # of active bundles.  
-  **Example Output:** `30.0`
+  - **# of wallets in bundle**  
+  The number of distinct wallets within the bundle. There may be multiple values to fetch here, depending on the total # of active bundles.  
+  **Example Output:** `4`
 
 - **Total # of inactive bundles**  
   The total number of Jito bundles that are no longer holding any amount of token supply, ie. have sold all holdings to 0%  
@@ -177,28 +173,29 @@ dragon-data-modules/
 
 - **Metadata for each inactive bundle**
 
-  - **# of wallets in bundle**  
-  The number of distinct wallets within the bundle. There may be multiple values to fetch, depending on the total # of inactive bundles.  
-  **Example Output:** `10`
-
   - **% total in bundle**  
   The amount of token supply that the bundle originally bought. There may be multiple values to fetch, depending on the total # of inactive bundles.  
   **Example Output:** `7.8`
 
+  - **# of wallets in bundle**  
+  The number of distinct wallets in the bundle. There may be multiple values to fetch, depending on the total # of inactive bundles.  
+  **Example Output:** `10`
 
 ### Module Output
 
-We have included a testing environment where you can see your live code displayed in the module. The live module will be interactive, meaning you can hover to reveal the metadata you retrieved for each bundle. *Note:* The module output only displays data for active bundles.
+We have included a testing environment where you can see your code displayed live in the module. The testing module will be interactive, meaning you can hover to reveal the metadata retrieved per bundle. *Note:* The module output only displays data for active bundles.
 
 ---
 
 ## Bounty Selection Criteria
 
 We will select a recipient for this bounty based on the following criteria, in order of evaluation:
+
 1. A fully complete retrieval of the data outlined in [Module Details](#module-details)
-2. The highest accuracy for data retrieved in real-time
-3. The fastest speed for data retrieval
-4. If there is more than one developer to meet the above criteria, the first pull request will receive the bounty
+2. The highest accuracy for data retrieved
+3. The fastest speed for retrieval, updated within seconds to real-time
+   
+If there is more than one developer to meet the above criteria, the first pull request will receive the bounty
 
 ---
 
@@ -248,12 +245,12 @@ We will select a recipient for this bounty based on the following criteria, in o
 
 Dragon’s aim is to make token analyses more transparent and community-driven. After the initial four modules, bounties will expand to include more data-modules on holder analyses and deception analyses on token supply.
 
-If you have an idea for a data-module that could benefit traders in the trenches, please propose it [here](https://github.com/alpha-dragon-org/dragon-module-openIdeas) to be considered for a bounty.
+If you have an idea for a data-module that could benefit traders in the trenches, please propose it in the discussion [here](https://github.com/alpha-dragon-org/dragon-module-openIdeas) to be considered for a bounty.
 
 ---
 ## Issues
 
-Please report any software “bugs” or other problems with this module through the issues tab here: [github.com/alpha-dragon-org/dragon-module2-bundleAnalysis](https://github.com/alpha-dragon-org/dragon-module2-bundleAnalysis)
+Please report any software “bugs” or other problems with this module through the issues here: [github.com/alpha-dragon-org/dragon-module2-bundleAnalysis](https://github.com/alpha-dragon-org/dragon-module2-bundleAnalysis)
 
 ---
 ## License
