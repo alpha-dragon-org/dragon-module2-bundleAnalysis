@@ -18,10 +18,11 @@ Soon, developers will contribute their own modules to Dragon based on what they 
   - [Contribution Overview](#contribution-overview)
   - [Folder Structure](#folder-structure)
   - [Setup \& Installation](#setup--installation)
-  - [Bounty Details](#bounty-details)
+  - [Module Details](#module-details)
+  - [Bounty Selection Criteria](#bounty-selection-criteria)
   - [Using Helius RPC for Integration](#using-helius-rpc-for-integration)
-  - [Future Bounties](#future-bounties)
   - [Contributing](#contributing)
+  - [Future Bounties](#future-bounties)
   - [Issues](#issues)
   - [License](#license)
 
@@ -120,7 +121,7 @@ dragon-data-modules/
    ```bash
    npm run telegram
    ```
-5. **View results on frontend.**
+5. **View results in testing environment.**
 
    Start the API server to fetch data from backend:
 
@@ -140,12 +141,11 @@ dragon-data-modules/
 
 ---
 
-## Bounty Details
+## Module Details
 
 - **Module Name:** Bundle Analysis 
 - **Bounty:** 0.10% of $DRAGON supply  
 - **Goals:** Retrieve all data below in real-time and with extremely high accuracy.
-
 
 ### Data To Fetch
 
@@ -157,7 +157,11 @@ dragon-data-modules/
   The total amount of token supply actively held that was bought using a Jito bundle.  
    **Example Output:** `32.2`
 
-- **Metadata for each bundle**
+- **Total # of inactive bundles**  
+  The total number of Jito bundles that are no longer holding any amount of token supply, ie. have sold all holdings to 0%  
+   **Example Output:** `2`
+
+- **Metadata for each active bundle**
 
   - **# of wallets in bundle**  
   The number of distinct wallets within the bundle. There may be multiple values to fetch, depending on the total # of active bundles.  
@@ -166,6 +170,22 @@ dragon-data-modules/
   - **% active in bundle**  
   The amount of token supply actively held within the bundle. There may be multiple values to fetch, depending on the total # of active bundles.  
   **Example Output:** `30.0`
+
+### Module Output
+
+We have included a testing environment where you can see your live code displayed in the module. The live module will be interactive, meaning you can hover to reveal the metadata you retrieved for each bundle. *Note:* The module output only displays active bundles by design.
+
+---
+
+## Bounty Selection Criteria
+
+We will select a recipient for this bounty based on the following criteria, in order of evaluation:
+1. A fully complete retrieval of the data outlined in [Module Details](#module-details)
+2. The highest accuracy for data retrieved in real-time
+3. The fastest speed for data retrieval
+4. If there is more than one developer to meet the above criteria, the first pull request will receive the bounty
+
+At the discretion of the Dragon executive team, if the bounty is completed by combining the codes of multiple submissions AND there are no single submissions that meet all criteria, we may elect to split the bounty between the developers involved.
 
 ---
 
@@ -179,14 +199,6 @@ dragon-data-modules/
 - **Improve performance:** Integrate batching of RPC calls if necessary to further improve response time.
 
 *Note:* If any data can not be retrieved from RPC, or if data can be faster retrieved via another method such as data streams, the developer can implement the alternative method with a brief explanation for their choice.
-
----
-
-## Future Bounties
-
-Dragon’s aim is to make token analyses more transparent and community-driven. After the initial four modules, bounties will expand to include more data-modules on holder analyses and deception analyses on token supply.
-
-If you have an idea for a data-module that could benefit traders in the trenches, please propose it [here](https://github.com/alpha-dragon-org/dragon-module-openIdeas) to be considered for a bounty.
 
 ---
 
@@ -216,6 +228,14 @@ If you have an idea for a data-module that could benefit traders in the trenches
    ```
 
 6. **Open a pull request describing your changes and the code you have contributed.**
+
+---
+
+## Future Bounties
+
+Dragon’s aim is to make token analyses more transparent and community-driven. After the initial four modules, bounties will expand to include more data-modules on holder analyses and deception analyses on token supply.
+
+If you have an idea for a data-module that could benefit traders in the trenches, please propose it [here](https://github.com/alpha-dragon-org/dragon-module-openIdeas) to be considered for a bounty.
 
 ---
 ## Issues
