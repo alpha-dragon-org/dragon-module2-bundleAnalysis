@@ -166,7 +166,7 @@ dragon-data-modules/
   **Example Output:** `45.3`
 
   - **# of wallets in bundle**  
-  The number of distinct wallets within the bundle. There may be multiple values to fetch here, depending on the total # of active bundles.  
+  The number of distinct wallets within the bundle. There may be multiple values to fetch, depending on the total # of active bundles.  
   **Example Output:** `4`
 
 - **Total # of inactive bundles**  
