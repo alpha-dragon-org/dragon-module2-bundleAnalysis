@@ -173,7 +173,7 @@ dragon-data-modules/
 
 ### Module Output
 
-We have included a testing environment where you can see your live code displayed in the module. The live module will be interactive, meaning you can hover to reveal the metadata you retrieved for each bundle. *Note:* The module output only displays active bundles by design.
+We have included a testing environment where you can see your live code displayed in the module. The live module will be interactive, meaning you can hover to reveal the metadata you retrieved for each bundle. *Note:* The module output only displays active bundles.
 
 ---
 
