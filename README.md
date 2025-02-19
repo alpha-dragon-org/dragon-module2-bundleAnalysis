@@ -1,9 +1,11 @@
 # Intro to Dragon Data-Modules
 
-Dragon is a browser extension that visualizes the power concentrations of any token on the Solana blockchain. The extension is separated into "data-modules" that produce different analyses on a token's holders. Soon, developers will contribute their own modules to Dragon based on what they think is important for traders to know when in the trenches. The Alpha-Dragon includes four data-modules, and the module of focus for this bounty is:
+Dragon is a browser extension that visualizes the power concentrations of any token on the Solana blockchain. The extension is separated into "data-modules" that produce different analyses on a token's holders. Soon, developers will contribute their own modules to Dragon based on what they think is important for traders to know when in the trenches. 
+
+The Alpha-Dragon includes four data-modules, and the module of focus for this bounty is:
 
 **2. Bundle Analysis**  
-- This module will visualize the concentration of all Jito bundles that purchased a token's supply. A Jito bundle is when you program multiple wallets to execute transactions within the same slot in a Solana block. The specific data we will analyze with this module includes total # of active bundles, total % in active bundles, some metadata per each bundle, and more. You can learn about bundles from [this video](https://youtu.be/91k5QYdAprU?si=n0uGyhYk3EesIUdW) or from [Jito's documentation](https://docs.jito.wtf/lowlatencytxnsend/#bundles-api-v1-bundles). You may also want to know that Jito hosts their own [bundle explorer](https://explorer.jito.wtf/bundle-explorer?sortBy=Tip).
+- This module will visualize the concentration of all Jito bundles that purchased a token's supply. A Jito bundle is when you program multiple wallets to execute transactions within the same slot in a Solana block. The specific data to be retrieved includes total # of active bundles, total % in active bundles, some metadata per each bundle, and more. You can learn about bundles from [this video](https://youtu.be/91k5QYdAprU?si=n0uGyhYk3EesIUdW) or from [Jito's documentation](https://docs.jito.wtf/lowlatencytxnsend/#bundles-api-v1-bundles). You may also want to know that Jito hosts their own [bundle explorer](https://explorer.jito.wtf/bundle-explorer?sortBy=Tip).
   
 ---
 
@@ -26,7 +28,7 @@ Dragon is a browser extension that visualizes the power concentrations of any to
 
 ## Contribution Overview
 
-Dragon's first four modules currently gather data by web-scraping TrenchyBot, TrenchRadar, and Bubblemaps. The task is to build a pipeline that connects the Token Info module with a Solana RPC (eg. [Helius](https://www.helius.dev)) and replace all scrapes. If any data can not be retrieved from RPC, the developer can use whatever means necessary given the goals stated in the [Module Details](#module-details) below.
+This module currently gathers data by web-scraping TrenchRadar. The task is to build a pipeline that connects the Token Info module with a Solana RPC (eg. [Helius](https://www.helius.dev)) and replace all scrapes. If any data can not be retrieved from RPC, the developer can use whatever means necessary given the goals stated in the [Module Details](#module-details) below.
 
 If the data retrieved is as close to real-time as possible, Dragon will become an unbeatable companion in the trenches.
 
@@ -183,7 +185,7 @@ dragon-data-modules/
 
 ### Module Output
 
-We have included a testing environment where you can see your code displayed live in the module. The testing module will be interactive, meaning you can hover to reveal the metadata retrieved per bundle. *Note:* The module output only displays data for active bundles.
+We have included a testing environment where you can see your code displayed live in the module. The test module will be interactive, meaning you can hover to reveal the metadata retrieved per bundle. *Note:* The module output may only display data for active bundles.
 
 ---
 
@@ -195,13 +197,13 @@ We will select a recipient for this bounty based on the following criteria, in o
 2. The highest accuracy for data retrieved
 3. The fastest speed for retrieval, updated within seconds to real-time
    
-If there is more than one developer to meet the above criteria, the first pull request will receive the bounty
+If there is more than one developer to meet the above criteria, the first pull request will receive the bounty.
 
 ---
 
 ## Using Helius RPC for Integration
 
-[Helius](https://www.helius.dev) is a powerful RPC service that enables quick and direct access to on-chain data on Solana. By integrating Helius RPC calls into Dragon's data-modules, we can **replace slow web-scraping techniques** and **increase data accuracy.** 
+[Helius](https://www.helius.dev) is a powerful RPC service that enables quick and direct access to on-chain data on Solana. By integrating Helius RPCs into Dragon's data-modules, we can **replace slow web-scraping techniques** and **increase data accuracy.** 
 
 **How to update the code**
 - **Modify the stub functions:** In files like `src/modules/tokenInfo.js` and `src/api/server.js`, update the stub implementations to call the appropriate Helius RPC endpoints.
