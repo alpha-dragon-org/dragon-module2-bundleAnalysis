@@ -175,9 +175,20 @@ dragon-data-modules/
   The amount of token supply actively held within the bundle. There may be multiple values to fetch, depending on the total # of active bundles.  
   **Example Output:** `30.0`
 
+- **Metadata for each inactive bundle**
+
+  - **# of wallets in bundle**  
+  The number of distinct wallets within the bundle. There may be multiple values to fetch, depending on the total # of inactive bundles.  
+  **Example Output:** `10`
+
+  - **% total in bundle**  
+  The amount of token supply that the bundle originally bought. There may be multiple values to fetch, depending on the total # of inactive bundles.  
+  **Example Output:** `7.8`
+
+
 ### Module Output
 
-We have included a testing environment where you can see your live code displayed in the module. The live module will be interactive, meaning you can hover to reveal the metadata you retrieved for each bundle. *Note:* The module output only displays active bundles.
+We have included a testing environment where you can see your live code displayed in the module. The live module will be interactive, meaning you can hover to reveal the metadata you retrieved for each bundle. *Note:* The module output only displays data for active bundles.
 
 ---
 
