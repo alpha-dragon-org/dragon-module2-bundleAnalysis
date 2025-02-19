@@ -28,7 +28,7 @@ The Alpha-Dragon includes four data-modules, and the module of focus for this bo
 
 ## Contribution Overview
 
-This module currently gathers data by web-scraping TrenchRadar. The task is to build a pipeline that connects the Token Info module with a Solana RPC (eg. [Helius](https://www.helius.dev)) and replace all scrapes. If any data can not be retrieved from RPC, the developer can use whatever means necessary given the goals stated in the [Module Details](#module-details) below.
+This module currently gathers data by web-scraping TrenchRadar. The task is to build a pipeline that connects this module with a Solana RPC (eg. [Helius](https://www.helius.dev)) and replace all scrapes. If any data can not be retrieved from RPC, the developer can use whatever means necessary given the goals stated in the [Module Details](#module-details) below.
 
 If the data retrieved is as close to real-time as possible, Dragon will become an unbeatable companion in the trenches.
 
