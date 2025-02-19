@@ -18,7 +18,7 @@ The Alpha-Dragon includes four data-modules, and the module of focus for this bo
   - [Setup \& Installation](#setup--installation)
   - [Module Details](#module-details)
   - [Bounty Selection Criteria](#bounty-selection-criteria)
-  - [Using Helius RPC for Integration](#using-helius-rpc-for-integration)
+  - [Integrating RPCs for Data Retrieval](#integrating-rpcs-for-data-retrieval)
   - [Contributing](#contributing)
   - [Future Bounties](#future-bounties)
   - [Issues](#issues)
@@ -201,11 +201,11 @@ If there is more than one developer to meet the above criteria, the first pull r
 
 ---
 
-## Using Helius RPC for Integration
+## Integrating RPCs for Data Retrieval
 
-[Helius](https://www.helius.dev) is a powerful RPC service that enables quick and direct access to on-chain data on Solana. By integrating Helius RPCs into Dragon's data-modules, we can **replace slow web-scraping techniques** and **increase data accuracy.** 
+[Helius](https://www.helius.dev) is an example of an RPC service that enables quick and direct access to on-chain data on Solana. By integrating RPCs into Dragon's data-modules, we can **replace slow web-scraping techniques** and **increase data accuracy.** 
 
-**How to update the code**
+**How to update the code (with Helius)**
 - **Modify the stub functions:** In files like `src/modules/tokenInfo.js` and `src/api/server.js`, update the stub implementations to call the appropriate Helius RPC endpoints.
 - **Leverage the configured endpoints:** Use the `HELIUS_RPC_URL` from `src/config/config.js` to ensure that your RPC calls are directed to the correct endpoint with your API key.
 - **Improve performance:** Integrate batching of RPC calls if necessary to further improve response time.
