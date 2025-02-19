@@ -167,6 +167,10 @@ dragon-data-modules/
   The number of distinct wallets within the bundle. There may be multiple values to fetch, depending on the total # of active bundles.  
   **Example Output:** `4`
 
+  - **% total in bundle**  
+  The amount of token supply that the bundle originally bought. There may be multiple values to fetch, depending on the total # of active bundles.  
+  **Example Output:** `45.3`
+
   - **% active in bundle**  
   The amount of token supply actively held within the bundle. There may be multiple values to fetch, depending on the total # of active bundles.  
   **Example Output:** `30.0`
