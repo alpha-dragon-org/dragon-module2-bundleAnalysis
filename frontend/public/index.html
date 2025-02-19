@@ -215,7 +215,7 @@
       <img src="images/logo.gif" alt="Dragon" class="dragon-image" />
       <h1 class="project-title">Project: Dragon</h1>
       <h2 class="module-title">Module: Bundles Chart</h2>
-      <p class="bounty-text">Bounty: 0.20% of $DRAGON supply</p>
+      <p class="bounty-text">Bounty: 0.10% of $DRAGON supply</p>
       <p class="instructions">
         Please paste an SPL token contract address in the field provided
         to test the functionality of your code. The data output is
@@ -230,8 +230,35 @@
         <h2>Data Field</h2>
         <!-- Bundle Stats (Active Bundles, Total Holding) -->
         <div class="bundle-stats">
-          <div>Active Bundles: <strong>Loading...</strong></div>
-          <div>Total Holding: <strong>Loading...</strong></div>
+          <div>Total # of active bundles: <strong>N/A</strong></div>
+          <div>Total % in active bundles: <strong>N/A</strong></div>
+
+
+
+        </div>
+        <br>
+        <h2>Metadata</h2>
+        <!-- Bundle Stats (Active Bundles, Total Holding) -->
+        <div class="bundle-stats">
+
+
+          <!-- We have shown just the top 3 bundles, but we expect the developer 
+            to fetch details of all the bundles (both actives and non-actives)-->
+          
+            <!-- Metadata is not connected to the backend -->     
+          <div># of wallets in bundle1:<strong>N/A</strong></div>
+          <div>% total in bundle1:<strong>N/A</strong></div> 
+          <div>% active in bundle1:<strong>N/A</strong></div> 
+
+
+          <div># of wallets in bundle2:<strong>N/A</strong></div>
+          <div>% total in bundle2:<strong>N/A</strong></div> 
+          <div>% active in bundle2:<strong>N/A</strong></div> 
+
+          <div># of wallets in bundle3:<strong>N/A</strong></div>
+          <div>% total in bundle3:<strong>N/A</strong></div> 
+          <div>% active in bundle3:<strong>N/A</strong></div> 
+
         </div>
       </div>
 
@@ -251,12 +278,15 @@
 
         <br /><br />
 
-        <h2>Module Output</h2>
+        <h2>Module Output (hover for metadata)</h2>
         <div class="container">
           <!-- New Stats Display in Output Section -->
           <div class="bundle-output-stats">
-            <div>Active Bundles: <strong>Loading...</strong></div>
-            <div>Total Holding: <strong>Loading...</strong></div>
+            <div>Total # of active bundles: <strong>N/A</strong></div>
+            <div>Total % in active bundles: <strong>N/A</strong></div>
+
+
+
           </div>
 
           <!-- Chart Message (hidden by default) -->
