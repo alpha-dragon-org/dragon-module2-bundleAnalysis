@@ -263,3 +263,8 @@ This project is open source and available under [the MIT License](https://openso
 <img src="https://github.com/alpha-dragon-org/dragon-module1-tokeninfo/blob/main/frontend/public/images/logo.gif?raw=true" width="200">
 Want to meet the project co-founders?
 
+
+
+https://github.com/user-attachments/assets/6cff115a-b975-44cf-943d-bc127e93cbbc
+
+
