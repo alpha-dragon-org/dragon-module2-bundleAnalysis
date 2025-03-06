@@ -46,7 +46,7 @@ dragon-data-modules/
 │   ├── api
 │   │   └── server.js        # Express API server for data storage and retrieval which connects to the endpoints
 │   ├── config
-│   │   └── config.js        # Configuration file (ports, API keys, Helius RPC endpoint)
+│   │   └── config.js        # Configuration file (ports, API keys, RPC endpoint)
 │   ├── modules
 │   │   ├── bundleAnalysis.js   # Module for Bundle Analysis
 │   │   ├── clusterAnalysis.js  # Module for Cluster Analysis
