@@ -250,7 +250,7 @@ If there is more than one developer to satisfy the above criteria, the first pul
 
 Dragon’s aim is to make token analyses more transparent and community-driven. At the community's direction, bounties will expand to include more types of holder analyses and deception analyses on token supply.
 
-If you have an idea for a module that could benefit traders in the trenches, please propose it in the discussion [here](https://github.com/orgs/alpha-dragon-org/discussions) to be considered for a bounty.
+If you have an idea for a module that could benefit traders in the trenches, please propose it in the discussion [here](https://github.com/alpha-dragon-org/dragon-module-openIdeas) to be considered for a bounty.
 
 ---
 ## Issues
@@ -265,9 +265,9 @@ This project is open source and available under [the MIT License](https://openso
 ---
 <img src="https://github.com/alpha-dragon-org/dragon-module1-tokeninfo/blob/main/frontend/logo-d.gif?raw=true" width="150">
 
-[X](https://x.com/AlphaDragonAI) |
-[Discussion](https://github.com/orgs/alpha-dragon-org/discussions) |
-[Telegram](https://t.me/+OU0SLVfcpEZhZWQx)
+[Discussion](https://github.com/alpha-dragon-org/dragon-community-openIdeas/discussions) |
+[Telegram](https://t.me/+OU0SLVfcpEZhZWQx) |
+[X](https://x.com/AlphaDragonAI)
 
 https://github.com/user-attachments/assets/6cff115a-b975-44cf-943d-bc127e93cbbc
 
