@@ -1,17 +1,17 @@
-# Intro to Dragon's Data-Modules
+# Intro to Dragon's Modules
 
-Dragon is a browser extension that visualizes the concentrations in power for any token on the Solana blockchain. The extension is separated into "data-modules" that provide different analyses on a token's holders. Soon, developers will contribute their own modules to Dragon based on what they think is important for traders to know in the trenches. 
+Dragon is a companion that visualizes the concentrations in power for any token on the Solana blockchain. The extension is separated into modules that provide different analyses on a token. Soon, developers will contribute their own modules to Dragon based on what they think is important for traders to know in the trenches.
 
-The initial release includes four data-modules, and the one for this bounty is:
+The initial release includes four modules and the module for this bounty is:
 
 **2. Bundle Analysis**  
-- This module will visualize the concentration of all Jito bundles that purchased a token's supply. A Jito bundle is when you program multiple wallets to execute transactions within the same slot in a Solana block. The specific data to be retrieved includes total # of active bundles, total % in active bundles, some metadata per each bundle, and more. You can learn about bundles from [this video](https://youtu.be/91k5QYdAprU?si=n0uGyhYk3EesIUdW) or from [Jito's documentation](https://docs.jito.wtf/lowlatencytxnsend/#bundles-api-v1-bundles). You may also want to know that Jito hosts their own [bundle explorer](https://explorer.jito.wtf/bundle-explorer?sortBy=Tip).
+- This module visualizes the concentration of all Jito bundles that hold a token's supply. A Jito bundle is when you program multiple wallets to execute transactions within the same slot in a Solana block. The data to be retrieved includes total # of active bundles, total % in active bundles, some metadata per each bundle, and more. You can learn about bundles from [this video](https://youtu.be/91k5QYdAprU?si=n0uGyhYk3EesIUdW) or from [Jito's documentation](https://docs.jito.wtf/lowlatencytxnsend/#bundles-api-v1-bundles). You may also want to know that Jito hosts their own [bundle explorer](https://explorer.jito.wtf/bundle-explorer?sortBy=Tip).
   
 ---
 
 ## Table of Contents
 
-- [Intro to Dragon's Data-Modules](#intro-to-dragons-data-modules)
+- [Intro to Dragon's Modules](#intro-to-dragons-modules)
 - [Table of Contents](#table-of-contents)
   - [Contribution Overview](#contribution-overview)
   - [Folder Structure](#folder-structure)
@@ -28,9 +28,9 @@ The initial release includes four data-modules, and the one for this bounty is:
 
 ## Contribution Overview
 
-This module currently gathers data by web-scraping TrenchRadar. The task is to build a pipeline that connects this module with a Solana RPC (eg. [Helius](https://www.helius.dev)) and replace all scrapes. If any data can not be retrieved from RPC, the developer can use whatever means necessary given the goals stated in the [Module Details](#module-details) below.
+This module currently gathers data by web-scraping TrenchRadar. The task is to build a pipeline that connects this module to a Solana RPC (eg. Helius) and replace all scrapes if possible. If any data can not be retrieved from RPC, the developer can use whatever means necessary given the goals stated in the Module Details below.
 
-If the data retrieved is as close to real-time as possible, Dragon will become an unbeatable companion in the trenches.
+If the data retrieved is as close to real-time as possible, Dragon becomes an unbeatable companion in the trenches.
 
 ---
 
@@ -195,7 +195,7 @@ We will select a recipient for this bounty based on the following criteria, in o
 
 1. A fully complete retrieval of the data outlined in [Module Details](#module-details)
 2. Closest to 100% accuracy for all data retrieved
-3. Closest to immediate for data retrieval, updated in real-time
+3. Closest to immediate for data retrieval, and updated in real-time
 4. Most comprehensive documentation of the work in accompanying readme file
    
 If there is more than one developer to satisfy the above criteria, the first pull request will receive the bounty. 
@@ -248,14 +248,14 @@ If there is more than one developer to satisfy the above criteria, the first pul
 
 ## Future Bounties
 
-Dragon’s aim is to make token analyses more transparent and community-driven. At the community's direction, bounties will expand to include more types of holder analyses and deception analyses on token supply.
+Dragon’s aim is to make token analyses more transparent and community-driven. At the community's direction, bounties will expand to include all kinds of fundamental token analyses.
 
 If you have an idea for a module that could benefit traders in the trenches, please propose it in the discussion [here](https://github.com/orgs/alpha-dragon-org/discussions) to be considered for a bounty.
 
 ---
 ## Issues
 
-Please report any software “bugs” or other problems with this module through the issues here: [github.com/alpha-dragon-org/dragon-module2-bundleAnalysis](https://github.com/alpha-dragon-org/dragon-module2-bundleAnalysis)
+Please report any bugs with this module through the issues tab here: [github.com/alpha-dragon-org/dragon-module1-tokeninfo](https://github.com/alpha-dragon-org/dragon-module1-tokeninfo)
 
 ---
 ## License
